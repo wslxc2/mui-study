@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.css" rel="stylesheet" />
+		<style>
+			.box{
+				width: 90%;
+				margin: 10px auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a href="#" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">带图标的按钮</h1>
+		</header>
+		<div class="mui-content">
+			<div class="box">
+				<p>图标居左</p>
+				<!-- 
+					mui-icon mui-icon-name  这两个类是决定图标的
+					mui-pull-left(right) 这个类决定图标放置的位置
+				 -->
+				<button class="mui-btn"><span class="mui-icon mui-icon-home mui-pull-left"></span>首页</button>
+				<button class="mui-btn mui-btn-primary"><span class="mui-icon mui-icon-search mui-pull-left"></span>搜索</button>
+				<button class="mui-btn mui-btn-success"><span class="mui-icon mui-icon-plus mui-pull-left"></span>添加</button>
+				<button class="mui-btn mui-btn-danger mui-btn-outlined"><span class="mui-icon mui-icon-trash mui-pull-left"></span>删除</button>
+				<a href="#" type="button" class="mui-action-back mui-icon mui-icon-left-nav">返回</a>
+				
+				<p>图标居右</p>
+				<button class="mui-btn"><span class="mui-icon mui-icon-home mui-pull-right"></span>首页</button>
+				<button class="mui-btn mui-btn-primary"><span class="mui-icon mui-icon-search mui-pull-right"></span>搜索</button>
+				<button class="mui-btn mui-btn-success"><span class="mui-icon mui-icon-plus mui-pull-right"></span>添加</button>
+				<button class="mui-btn mui-btn-danger mui-btn-outlined"><span class="mui-icon mui-icon-trash mui-pull-right"></span>删除</button>
+				<a href="#" type="button" class="mui-action-back mui-icon mui-icon-left-nav">返回</a>
+			</div>
+		</div>
+		<script src="js/mui.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>
