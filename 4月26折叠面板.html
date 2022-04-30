@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.css" rel="stylesheet" />
+		<style>
+			.mui-table-view{
+				width: 95%;
+				margin: 0 auto;
+			}
+			#one{
+				
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--输入 mheader 快捷创建顶部标题栏 -->
+		<header class="mui-bar mui-bar-nav">
+			<a href="#" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">折叠面板</h1>
+		</header>
+		
+		<!-- 输入 mbody 快捷创建主体结构 -->
+		<div class="mui-content">
+			<!-- 	折叠面板是由 列表与二级列表组成  -->
+			
+					<!-- 列表的类有：
+					设置父元素的类  mui-table-view   
+					设置子元素的类  mui-table-view-cell --> 
+			<!-- 例如 -->
+			
+			<ul class="mui-table-view" style="margin-bottom: 10px;">
+				<li class="mui-table-view-cell">这是一个列表</li>
+				<li class="mui-table-view-cell">你好</li>
+				<li class="mui-table-view-cell">你好</li>
+				<li class="mui-table-view-cell">你好</li>
+			</ul>
+			
+			<!-- 而  mui-collapse、mui-collapse-content 
+					这些类明显是属于二级列表的类 
+					mui-collapse  放在二级列表中一级的标签上，
+					如果在该标签下写入内容，会显示在一级标签中，
+					除非该标签使用以下的类。
+					mui-collapse-content  二级列表中第二级，
+					也就是二级内容的标签上。
+			-->
+			
+			<ul class="mui-table-view">
+				<!-- 表单 -->
+				<li class="mui-table-view-cell mui-collapse">
+					<a href="#" class="mui-navigate-right">表单</a>
+					<div class="mui-collapse-content">
+						<form action="" class="mui-input-group">
+							<div class="mui-input-row">
+								<label for="username">账号</label>
+								<input type="text" id="username" class="mui-input-clear" placeholder="请输入您的账号">
+							</div>
+							<div class="mui-input-row">
+								<label for="password">密码</label>
+								<input type="password" id="password" class="mui-input-password" placeholder="请输入你的密码">
+							</div>
+							<!-- 表单中的按钮和普通按钮的父组件类名不一样，
+								 其样式也不一样
+							-->
+							<div class="mui-button-row">
+								<button type="button" class="mui-btn mui-btn-primary" data-loading-text="正在登录" data-loading-icon="mui-spinner">登录</button>
+								<button type="button" class="mui-btn mui-btn-danger">注册</button>
+							</div>
+						</form>
+						
+					</div>
+				</li>
+				<!-- 图片轮播 -->
+				<li class="mui-table-view-cell mui-collapse">
+					<!-- mui-navigate-right 类是使右侧显示箭头图标的 -->
+					<a href="#" class="mui-navigate-right">图片轮播</a>
+					<div class="mui-collapse-content">
+						<!-- 图片轮播默认不循环，循环需要在mui-slider-group 类中
+							再加上mui-slider-loop ,并且顺序要改变，在需要改变的
+							顺序类中再添加类  mui-slider-item-duplicate  具体如下。
+						-->
+						<!-- 图片轮播需要的类
+							 ①mui-slider--写在父元素。
+							 ②mui-slider-group--写在所有图片的上一层。
+							 ③mui-slider-item--该层是包含图片那一层。
+						 -->
+						<div class="mui-slider">
+							<div class="mui-slider-group mui-slider-loop">
+								<div class="mui-slider-item mui-slider-item-duplicate">
+									<a href="#"><img src="images/4.png" alt=""></a>
+								</div>
+								<div class="mui-slider-item">
+									<a href="#"><img src="images/1.png" alt=""></a>
+								</div>
+								<div class="mui-slider-item">
+									<a href="#"><img src="images/2.png" alt=""></a>
+								</div>
+								<div class="mui-slider-item">
+									<a href="#"><img src="images/3.png" alt=""></a>
+								</div>
+								<div class="mui-slider-item">
+									<a href="#"><img src="images/4.png" alt=""></a>
+								</div>
+								<div class="mui-slider-item mui-slider-item-duplicate">
+									<a href="#"><img src="images/1.png" alt=""></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<!-- 文字排版 -->
+				<li class="mui-table-view-cell mui-collapse">
+					<a href="#" class="mui-navigate-right">文字排版</a>
+					<div class="mui-collapse-content">
+						<h1>haha</h1>
+						<h2>haha</h2>
+						<h3>haha</h3>
+						<h4>haha</h4>
+						<h5>haha</h5>
+						<h6>haha</h6>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<script src="js/mui.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			//获得slider插件对象
+			var gallery = mui('.mui-slider');
+			gallery.slider({
+			  interval:3000//自动轮播周期，若为0则不自动播放，默认为0；
+			});
+			//gallery.slider().gotoItem(index);//跳转到第index张图片，index从0开始；
+			mui('.mui-bar-transparent').transparent({
+			    top: 0,
+			    offset: 150,
+			    duration: 16,
+			    scrollby: document.querySelector('.mui-scroll-wrapper')
+			})
+		</script>
+	</body>
+
+</html>

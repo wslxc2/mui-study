@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.css" rel="stylesheet" />
+		<style>
+			.btn1{
+				width: 80%;
+				margin-top: 10%;
+				margin-left: 50%;
+				position: relative;
+				/* 当前元素宽度的一半 */
+				left: -40%;
+			}
+			.mui-color-red{
+				color: red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">操作表</h1>
+		</header>
+		
+		<footer class="mui-bar mui-bar-footer">
+			<!-- <h1 class="mui-title">页脚</h1> -->
+			<!-- mui-pull-*  这两个图标起到在左边还是在右边的效果是由改行代码造成的 -->
+			<a href="#sheet2" class="mui-icon mui-icon-trash mui-pull-left"></a>
+			<a href="#sheet3" class="mui-icon mui-icon-redo mui-pull-right"></a>
+		</footer> 
+			
+		
+		
+		<!-- actionsheet一般从底部弹出，显示一系列可供用户选择的操作按钮； 
+			 actionsheet是从popover控件基础上演变而来，
+			 实际上就是一个固定从底部弹出的popover 
+		
+		-->
+		<div class="mui-content">
+			<!-- 
+				这个是通过 js 的方式 来弹出操作表的
+				只需在 js 中通过 添加该行代码，即可实现：
+				mui('.bottomPopover').popover(status[,anchor]);
+				status 可选项有：
+						toggle(自动识别处理显示隐藏状态)、
+						show(显示popover)、
+						hide(隐藏popover)。
+				anchor  锚点元素。
+				-->
+			<button type="button" class="btn1 mui-btn mui-btn-primary mui-btn-outlined" id="btn">打开actionsheet</button>
+			<div class="mui-popover mui-popover-bottom mui-popover-action" id="sheet1">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell"> 
+						<a href="#">拍照或录像</a>	
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#">选取现有的</a>	
+					</li>
+				</ul>
+				<!-- 取消菜单 -->
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell"><a href="#sheet1"></a><b>取消 </b></li>
+				</ul>
+			</div>
+			
+			<!-- 
+				  这个popover 是通过锚点的方式来实现弹出操作表的 
+				  锚点的方式无需使用 js 语法，mui文档中弹出框的
+				  文档中是比较推荐使用锚点的
+			-->
+			
+			<div class="mui-popover mui-popover-bottom mui-popover-action" id="sheet2">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell mui-color-red">
+						<a href="#" class="">删除信息</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<!-- 取消按钮也绑定一个锚点，点击时就会隐藏弹出的操作表 -->
+						<a href="#sheet2"><b>取消</b></a>
+					</li>
+				</ul>
+			</div>
+			
+			<!-- 分享图标的操作表 -->
+			<div class="mui-popover mui-popover-bottom mui-popover-action" id="sheet3">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell"><a href="#">回复</a></li>
+					<li class="mui-table-view-cell"><a href="#">转发</a></li>
+					<li class="mui-table-view-cell"><a href="#">打印</a></li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell"><a href="#sheet3"><b>取消</b></a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<!-- 总结 -->
+		<!-- 
+			操作表的效果是由 popover(弹出菜单)、list(列表)组合成的。
+			只需在原本 popover 的类中再加上 mui-popover-b0ttom,
+			mui-popover-action 这两个类即可。
+			
+			popover 默认是隐藏（实际上好像只能默认隐藏），所以，
+			要实现使它显示弹出，有两种方法：
+			①锚点的方式，在被弹出内容的父元素上设置一个 id 属性，
+			在需要实现弹出操作的 a 标签上通过 href 属性绑定即可。
+			锚点属性一般只能用于 a 标签上，在 取消 的的列表上绑定一个
+			锚点，也可实现点击隐藏弹出菜单的效果。
+			②通过 js 的方式来实现。
+			
+		-->
+		<script src="js/mui.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			document.getElementById('btn').onclick = function(){
+				 mui('#sheet1').popover('toggle');
+				console.log('有效的点击');
+			}
+		
+		</script>
+	</body>
+
+</html>
