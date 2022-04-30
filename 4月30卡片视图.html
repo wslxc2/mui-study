@@ -6,9 +6,73 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="css/mui.css" rel="stylesheet" />
+		<style>
+			/* .mui-content{
+				margin-top: 10px;
+			} */
+		</style>
 	</head>
 
 	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a href="#" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">卡片视图</h1>
+		</header>
+		<!-- 
+			卡片视图常用于展现一段完整独立的信息，比如一篇文章的预览图、作者信息、点赞数量等
+		 -->
+		 <div class="mui-content">
+		 	<!-- 
+				使用mui-card类即可生成一个卡片容器，
+				卡片视图主要有页眉(mui-card-header)、内容区(mui-card-content)、页脚(mui-card-footer)三部分组成
+			 -->
+			<div class="mui-card">
+				
+				卡片视图常用于展现一段完整独立的信息，比如一篇文章的预览图、作者信息、点赞数量等
+			</div>
+			
+			<div class="mui-card">
+				<div class="mui-card-header">
+					页眉
+				</div>
+				<div class="mui-card-content">
+					包含页眉页脚的卡片。页眉可以用来显示标题，页脚可以展现作者信息、时间等。
+				</div>
+				<div class="mui-card-footer">
+					页脚
+				</div>
+			</div>
+			
+			<div class="mui-card">
+				<!-- 
+				 卡片页眉及内容区，均支持放置图片； 页眉放置图片的话，
+				 需要在.mui-card-header节点上增加.mui-card-media类，
+				 然后设置一张图片做背景图即可
+				 -->
+				 <!-- 
+				  若希望在页眉放置更丰富的信息，比如头像、主标题、
+				  副标题，则需使用.mui-media-body类
+				  -->
+				<div class="mui-card-header mui-card-media">
+					<!-- 图片放在外面 -->
+					<img src="./images/2.png" alt="">
+					<div class="mui-media-body">
+						<!-- 主标题 -->
+						无限山水好天下
+						<p>自游桂林山水30天</p>
+					</div>
+				</div>
+				<div class="mui-card-content">
+					<img src="./images/6.png" alt="" style="width: 100%;">
+					好玩的三十天之旅!......
+				</div>
+				<div class="mui-card-footer" style="display: flex;justify-content: space-between;">
+					<a href="#" type="button">进入查看</a>
+					<a href="#" type="button">不看此类内容</a>
+					<a href="#" type="button">进入主页</a>
+				</div>
+			</div>
+		 </div>
 		<script src="js/mui.js"></script>
 		<script type="text/javascript">
 			mui.init()
