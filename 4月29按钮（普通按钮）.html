@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.css" rel="stylesheet" />
+		<style>
+			.box{
+				width: 90%;
+				margin:  10px auto;
+				/* background-color: aqua; */
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a href="#" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">普通按钮</h1>
+		</header>
+		
+		<div class="mui-content">
+			<div class="box">
+				<p>有底色的按钮</p>
+				<button type="button" class="mui-btn">默认</button>
+				<button type="button" class="mui-btn mui-btn-primary">蓝色</button>
+				<button type="button" class="mui-btn mui-btn-danger">红色</button>
+				<button type="button" class="mui-btn mui-btn-warning">黄色</button>
+				<button type="button" class="mui-btn mui-btn-success">绿色</button>
+				<button type="button" class="mui-btn mui-btn-royal">紫色</button>
+				
+				<p>无底色的按钮(使用父元素的背景色)</p>
+				<!-- <button type="button" class="mui-btn">默认</button> -->
+				<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">蓝色</button>
+				<button type="button" class="mui-btn mui-btn-danger mui-btn-outlined">红色</button>
+				<button type="button" class="mui-btn mui-btn-warning mui-btn-outlined">黄色</button>
+				<button type="button" class="mui-btn mui-btn-success mui-btn-outlined">绿色</button>
+				<button type="button" class="mui-btn mui-btn-royal mui-btn-outlined">紫色</button>
+				
+				<p>链接按钮：</p>
+				<a href="#" type="button">添加</a>
+				
+				<p>默认input标签样式：</p>
+				<input type="submit" value="type=submit">
+				<input type="reset" value="type=reset">
+				<input type="button" value="type=button">
+				
+				<p>默认button标签样式：</p>
+				<button>按钮</button>
+			</div>
+			
+		</div>
+		<script src="js/mui.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>
