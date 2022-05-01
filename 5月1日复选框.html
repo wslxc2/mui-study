@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.css" rel="stylesheet" />
+		<style>
+			/* .mui-content{
+				margin-top: 10px;
+			} */
+			/* .mui-table-view{
+				width: 90%;
+				margin: 0 auto;
+			} */
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a href="#" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">复选框</h1>
+		</header>
+		
+		<div class="mui-content">
+			<p>图标左对齐</p>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<!-- mui-left 可以使选择框在左边或者右边 -->
+					<div class="mui-input-row mui-checkbox mui-left">
+						<label for="checkbox1">checked：false</label>
+						<input type="checkbox" id="checkbox1" value="checkbox1">
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<!-- mui-left 可以使选择框在左边或者右边 -->
+					<div class="mui-input-row mui-checkbox mui-left">
+						<label for="checkbox2">checked：false</label>
+						<input type="checkbox" id="checkbox2" value="checkbox2">
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<!-- mui-left 可以使选择框在左边或者右边 -->
+					<div class="mui-input-row mui-checkbox mui-left">
+						<label for="checkbox3">checked：disabled</label>
+						<input type="checkbox" id="checkbox3" value="checkbox3" disabled>
+					</div>
+				</li>
+			</ul>
+			
+			<p>图标右对齐</p>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<!-- mui-left 可以使选择框在左边或者右边 -->
+					<div class="mui-input-row mui-checkbox mui-right">
+						<label for="checkbox1">checked：false</label>
+						<input type="checkbox" id="checkbox1" value="checkbox1">
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<!-- mui-left 可以使选择框在左边或者右边 -->
+					<div class="mui-input-row mui-checkbox">
+						<label for="checkbox2">checked：false</label>
+						<input type="checkbox" id="checkbox2" value="checkbox2">
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<!-- mui-left 可以使选择框在左边或者右边 -->
+					<div class="mui-input-row mui-checkbox">
+						<label for="checkbox3">checked：disabled</label>
+						<input type="checkbox" id="checkbox3" value="checkbox3" disabled>
+					</div>
+				</li>
+			</ul>
+			
+		</div>
+		<script src="js/mui.js"></script>
+		<script type="text/javascript">
+			mui.init();
+		
+		</script>
+	</body>
+
+</html>
